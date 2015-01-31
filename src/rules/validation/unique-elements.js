@@ -3,7 +3,7 @@ module.exports = {
   name: "unique-elements",
 
   config: {
-    elements: ["title", "main"]
+    elements: ["title"]
   },
 
   func: function(listener, reporter, config) {

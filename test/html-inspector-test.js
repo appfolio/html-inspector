@@ -994,11 +994,9 @@ describe("unique-elements", function() {
       domRoot: html,
       onComplete: onComplete
     })
-    expect(log.length).to.equal(2)
+    expect(log.length).to.equal(1)
     expect(log[0].message).to.equal("The <title> element may only appear once in the document.")
-    expect(log[1].message).to.equal("The <main> element may only appear once in the document.")
     expect(log[0].context).to.deep.equal([html.querySelector("title"), html.querySelectorAll("title")[1]])
-    expect(log[1].context).to.deep.equal([html.querySelector("main"), html.querySelectorAll("main")[1]])
   })
 
   it("doesn't warn when single-use elements appear on the page only once", function() {
